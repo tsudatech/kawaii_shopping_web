@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title data-i18n-key="page_title">かわいい買い物メモ - かうものメモを、ねこと いっしょに。</title>
+    <meta
+      name="description"
+      data-i18n-key="meta_description"
+      content="かわいい買い物メモは、白ねこのキャラといっしょに使う、iPhone 向けの買い物リストアプリです。かうものを入れて、おみせでチェックしていくと、キャラがいっしょによろこんでくれます。まとめて入れる・こえで入れる・そろそろ切れそうなもののおしらせ・テンプレート・かいわすれチェック・ホーム画面ウィジェットつき。ログインは不要です。"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700;900&family=Baloo+2:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <link rel="apple-touch-icon" href="images/icon.png" />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <nav class="nav-container">
+        <a class="nav-logo" href="#">
+          <img src="images/icon.png" alt="" class="nav-logo-mark" />
+          <h1 data-i18n-key="app_name">かわいい買い物メモ</h1>
+        </a>
+        <ul class="nav-menu">
+          <li><a href="#faces" data-i18n-key="nav_faces">キャラ</a></li>
+          <li><a href="#features" data-i18n-key="nav_features">機能</a></li>
+          <li><a href="#download" data-i18n-key="nav_download">ダウンロード</a></li>
+          <li><a href="#privacy" data-i18n-key="nav_privacy">プライバシー</a></li>
+          <li><a href="#contact" data-i18n-key="nav_contact">お問い合わせ</a></li>
+        </ul>
+        <div class="language-switcher">
+          <button class="lang-btn active" data-lang="ja">日本語</button>
+          <span class="lang-separator">|</span>
+          <button class="lang-btn" data-lang="en">English</button>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-container">
+        <div class="hero-content">
+          <p class="hero-eyebrow" data-i18n-key="hero_eyebrow">ねこといっしょの買い物リスト</p>
+          <h2 class="hero-title">
+            <span data-i18n-key="hero_title_line1">かうものメモを、</span>
+            <span class="hero-title-accent" data-i18n-key="hero_title_line2">ねこと いっしょに。</span>
+          </h2>
+          <p class="hero-description" data-i18n-key="hero_description">かうものをメモして、おみせでチェックしていくだけ。メモするとうなずいて、かごに入れるとよろこんで、かいわすれがあると教えてくれる。ちいさな相棒といっしょに、まいにちのお買い物を。</p>
+          <div class="hero-buttons">
+            <a href="#download" class="btn btn-primary" data-i18n-key="hero_cta_download">ダウンロード</a>
+            <a href="#faces" class="btn btn-outline" data-i18n-key="hero_cta_faces">キャラを見る</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <!-- リスト画面と同じ、キャラとふきだし＋ちいさな かいものリスト -->
+          <div class="hero-stage">
+            <div class="hero-bubble" data-i18n-key="hero_bubble">あと 2こ！ もうすこし</div>
+            <img src="images/faces/cheer.png" alt="" class="hero-chara" />
+            <ul class="hero-list">
+              <li class="done"><span class="ck">✓</span><span class="nm" data-i18n-key="hero_item1">たまご</span><span class="qty" data-i18n-key="hero_qty1">1パック</span></li>
+              <li class="done"><span class="ck">✓</span><span class="nm" data-i18n-key="hero_item2">ぎゅうにゅう</span><span class="qty" data-i18n-key="hero_qty2">1本</span></li>
+              <li><span class="ck"></span><span class="nm" data-i18n-key="hero_item3">キャベツ</span></li>
+              <li><span class="ck"></span><span class="nm" data-i18n-key="hero_item4">とりむね</span><span class="qty" data-i18n-key="hero_qty4">2パック</span></li>
+            </ul>
+          </div>
+          <div class="hero-faces" aria-hidden="true">
+            <img src="images/faces/memo.png" alt="" />
+            <img src="images/faces/basketIn.png" alt="" />
+            <img src="images/faces/basketFull.png" alt="" />
+            <img src="images/faces/doya.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Faces Section -->
+    <section class="faces" id="faces">
+      <div class="container">
+        <h2 class="section-title" data-i18n-key="faces_title">キャラが いっしょに 反応</h2>
+        <p class="section-lead" data-i18n-key="faces_lead">かうものを入れたとき、かごに入れたとき、ぜんぶそろったとき。そのときどきで、白ねこの表情とセリフが変わります。</p>
+        <div class="faces-grid">
+          <div class="face-card">
+            <img src="images/faces/memo.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_memo_title">メモする</h3>
+              <p data-i18n-key="face_memo_text">かうものを入れたとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/basketIn.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_basketIn_title">かごにいれた</h3>
+              <p data-i18n-key="face_basketIn_text">チェックして、かごに入れたとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/cheer.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_cheer_title">おうえん</h3>
+              <p data-i18n-key="face_cheer_text">のこりが2こ以下になったとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/basketFull.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_basketFull_title">かごいっぱい</h3>
+              <p data-i18n-key="face_basketFull_text">ぜんぶそろったとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/happy.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_happy_title">るんるん</h3>
+              <p data-i18n-key="face_happy_text">さいしょのひとつを入れたとき、テンプレートを使ったとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/doya.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_doya_title">どやっ</h3>
+              <p data-i18n-key="face_doya_text">まとめて5こ以上入れたとき、スタンプをもらったとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/surprise.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_surprise_title">びっくり</h3>
+              <p data-i18n-key="face_surprise_text">そろそろ切れそうなものがあるとき、かごが予算をこえたとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/trouble.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_trouble_title">こまった</h3>
+              <p data-i18n-key="face_trouble_text">まだかっていないものがあるのに、おわろうとしたとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/cozy.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_cozy_title">ぬくぬく</h3>
+              <p data-i18n-key="face_cozy_text">のこりを次にまわして、おわったとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/sleepy.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_sleepy_title">ねむい</h3>
+              <p data-i18n-key="face_sleepy_text">朝（5〜10時）に開いたとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/nightcap.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_nightcap_title">ねぶそく</h3>
+              <p data-i18n-key="face_nightcap_text">夜（22〜5時）に開いたとき</p>
+            </div>
+          </div>
+          <div class="face-card">
+            <img src="images/faces/lonely.png" alt="" loading="lazy" />
+            <div class="face-body">
+              <h3 data-i18n-key="face_lonely_title">さみしい</h3>
+              <p data-i18n-key="face_lonely_text">3日以上あいて、ひさしぶりに開いたとき</p>
+            </div>
+          </div>
+        </div>
+        <p class="faces-note" data-i18n-key="faces_note">ぜんぶで14の表情。キャラタブの「ひょうじょうずかん」で、どの顔を何回みせたか見られます。キャラに名前もつけられます。</p>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2 class="section-title" data-i18n-key="features_title">主な機能</h2>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">🗂️</div></div>
+            <h3 data-i18n-key="feature_list_title">カテゴリに じどうで ふりわけ</h3>
+            <p data-i18n-key="feature_list_text">たまご・キャベツ・ティッシュなど、入れたものを売り場ごとにならべます。カテゴリをなおすと次からそこに入り、おみせごとに売り場の順番も変えられます。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">📋</div></div>
+            <h3 data-i18n-key="feature_bulk_title">まとめて・こえで いれる</h3>
+            <p data-i18n-key="feature_bulk_text">LINE のメモなどを貼りつけると、「、」や改行でわけて一度に入れます。「2パック」「×2」「300g」もよみとります。iPhone の音声認識で、こえでも入れられます。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">⏳</div></div>
+            <h3 data-i18n-key="feature_soon_title">そろそろ かも？</h3>
+            <p data-i18n-key="feature_soon_text">いつも買う間隔から、そろそろ切れそうなものを教えてくれます。タップひとつでリストへ。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">📄</div></div>
+            <h3 data-i18n-key="feature_tpl_title">テンプレート</h3>
+            <p data-i18n-key="feature_tpl_text">カレーの日・いつもの朝ごはんなど、いつものセットをタップひとつでリストへ。いまのリストからも作れます。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">✅</div></div>
+            <h3 data-i18n-key="feature_finish_title">かいわすれチェック</h3>
+            <p data-i18n-key="feature_finish_text">「おかいもの おわり」で、のこっているものを確認。つぎも買うものは、次のリストにのこせます。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">🏪</div></div>
+            <h3 data-i18n-key="feature_stores_title">おみせごとの リストと よさん</h3>
+            <p data-i18n-key="feature_stores_text">スーパー・ドラッグストアなど、おみせごとにリストをわけられます。ねだんを入れると、かごの合計と予算までのこりがわかります。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">📒</div></div>
+            <h3 data-i18n-key="feature_history_title">りれきと しなもの いちらん</h3>
+            <p data-i18n-key="feature_history_text">今月のお買い物の回数・使ったお金・よく買うもの。前のお買い物を、もう一度リストに入れることもできます。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">💮</div></div>
+            <h3 data-i18n-key="feature_stamps_title">スタンプちょう</h3>
+            <p data-i18n-key="feature_stamps_text">はじめてのお買い物、かいわすれゼロ、予算内でおわった…など、12のスタンプがたまります。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">⏰</div></div>
+            <h3 data-i18n-key="feature_remind_title">おかいものの日の おしらせ</h3>
+            <p data-i18n-key="feature_remind_text">えらんだ曜日と時間に、キャラのことばで、のこりのリストをおしらせします。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">🧩</div></div>
+            <h3 data-i18n-key="feature_widget_title">ホーム画面ウィジェット</h3>
+            <p data-i18n-key="feature_widget_text">のこりの数・リストのなかみ・そろそろ切れそうなものが、アプリを開かなくても見られます。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">☁️</div></div>
+            <h3 data-i18n-key="feature_icloud_title">iCloud に預けられる</h3>
+            <p data-i18n-key="feature_icloud_text">リストやりれきを iCloud に置いておけば、機種を変えても続きから使えます。使うかどうかは選べます。</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-icon"><div class="icon-placeholder">🔒</div></div>
+            <h3 data-i18n-key="feature_privacy_title">ログインなしですぐ使える</h3>
+            <p data-i18n-key="feature_privacy_text">アカウントの登録はいりません。日本語と英語に対応し、データは端末の中に保存されます。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+      <div class="container">
+        <h2 class="section-title" data-i18n-key="download_title">ダウンロード</h2>
+        <div class="download-content">
+          <div class="download-info">
+            <h3 data-i18n-key="download_heading">App Store で今すぐダウンロード</h3>
+            <p data-i18n-key="download_subheading">iOS 18.0 以降の iPhone に対応しています。</p>
+            <a href="#" class="app-store-placeholder" data-i18n-key="download_button">App Store でダウンロード</a>
+          </div>
+          <div class="download-requirements">
+            <h4 data-i18n-key="download_requirements_title">システム要件</h4>
+            <ul>
+              <li data-i18n-key="download_requirements_ios">iOS 18.0 以降</li>
+              <li data-i18n-key="download_requirements_devices">iPhone／縦向き</li>
+              <li data-i18n-key="download_requirements_language">日本語・英語</li>
+              <li data-i18n-key="download_requirements_iap">App内課金なし（広告あり）</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Privacy Section -->
+    <section class="privacy" id="privacy">
+      <div class="container">
+        <h2 class="section-title" data-i18n-key="privacy_title">プライバシーポリシー</h2>
+        <div class="privacy-content">
+          <h3 data-i18n-key="privacy_handling_heading">個人情報の取り扱いについて</h3>
+          <p data-i18n-key="privacy_handling_text">かわいい買い物メモ（以下「本アプリ」）は、利用者のプライバシーを尊重し、個人情報の保護に努めます。本アプリはアカウント登録を必要とせず、開発者のサーバーを持ちません。</p>
+
+          <h4 data-i18n-key="privacy_collect_heading">扱う情報</h4>
+          <p data-i18n-key="privacy_collect_text">本アプリが扱うのは、利用者が入力したかうもの（なまえ・かず・ねだん・メモ）、リスト・カテゴリ・テンプレート、お買い物のりれき、キャラの名前、スタンプの達成状況、および各種設定だけで、これらはすべて端末の中に留まります。開発者が氏名・メールアドレス・位置情報を収集することはありません。開発者自身は利用状況の解析（アナリティクス）を行いません。ただし、広告の表示のために、下記「広告について」のとおり Google が情報を扱います。</p>
+
+          <h4 data-i18n-key="privacy_storage_heading">情報の保存</h4>
+          <p data-i18n-key="privacy_storage_text">データと設定は、端末内のアプリ専用の領域に保存されます。ホーム画面ウィジェットに表示するため、いまのリストの名前・のこりの品物・そろそろ切れそうなものなどを、同じ端末の中でアプリとウィジェットが共有する領域（App Group）にも保存します。</p>
+
+          <h4 data-i18n-key="privacy_icloud_heading">iCloud について</h4>
+          <p data-i18n-key="privacy_icloud_text">設定で iCloud バックアップを有効にした場合に限り、リスト・カテゴリ・テンプレート・りれき・しなもの・スタンプ・キャラが iCloud のキーバリューストアに保存され、同じ Apple アカウントの端末間で同期されます。この同期は Apple の iCloud 上で完結し、開発者がその内容を参照することはできません。設定（表示・おしらせ）は同期されず、その端末にだけ残ります。</p>
+
+          <h4 data-i18n-key="privacy_voice_heading">マイクと音声認識について</h4>
+          <p data-i18n-key="privacy_voice_text">「こえで いれる」を使うときだけ、マイクと iPhone の音声認識を使います。認識はできるかぎり端末の中で行い、端末が対応していない場合は、Apple の音声認識サービスに音声が送られることがあります（Apple のプライバシーポリシーに従って扱われます）。開発者が音声や認識した文字を受け取ることはありません。許可はあとから iOS の「設定」で変えられます。</p>
+
+          <h4 data-i18n-key="privacy_notification_heading">通知について</h4>
+          <p data-i18n-key="privacy_notification_text">「おかいものの日の おしらせ」は、端末の中で予約するローカル通知です。通知のために情報を外部へ送ることはありません。通知を使うかどうかは、アプリの設定と iOS の「設定」で変えられます。</p>
+
+          <h4 data-i18n-key="privacy_ads_heading">広告について</h4>
+          <p data-i18n-key="privacy_ads_text">本アプリは、Google LLC の広告配信サービス「Google AdMob」を使って、画面の下のバナー広告と、「おかいもの おわり」のあとの全画面広告を表示します。広告の配信のため、Google は端末の広告識別子（IDFA）、IP アドレスから推定されるおおよその位置、広告の表示やタップの状況、端末の情報などを収集・利用することがあります。IDFA を使うのは、アプリの中で表示される確認（App Tracking Transparency）で利用者が許可した場合だけです。許可しなかった場合も広告は表示されますが、利用者に合わせた広告にはなりません。許可はあとから iOS の「設定」の「プライバシーとセキュリティ」→「トラッキング」で変更できます。かうものやリスト・りれきなど、利用者が入力した内容が広告に使われることはありません。Google による情報の扱いは、Google のプライバシーポリシー（https://policies.google.com/privacy）と、Google のサービスを使うサイトやアプリから収集した情報の Google による使用（https://policies.google.com/technologies/partner-sites）をご覧ください。</p>
+
+          <h4 data-i18n-key="privacy_network_heading">外部との通信</h4>
+          <p data-i18n-key="privacy_network_text">本アプリは、開発者のサーバーへ利用者のデータを送信しません。ネットワークを使うのは、広告の表示のための Google との通信と、利用者が iCloud バックアップを有効にした場合の Apple のサービスとの通信、上記のとおり音声認識で Apple のサービスを使う場合だけです。かうものやリストの内容が Google に送られることはありません。</p>
+
+          <h4 data-i18n-key="privacy_delete_heading">データの削除</h4>
+          <p data-i18n-key="privacy_delete_text">アプリを削除すると、端末内に保存されたデータと設定が削除されます。iCloud バックアップを使っている場合、iCloud 上のデータは iOS の「設定」の iCloud の項目から削除できます。</p>
+
+          <h4 data-i18n-key="privacy_children_heading">お子さまの利用について</h4>
+          <p data-i18n-key="privacy_children_text">本アプリは年齢を問わず利用できます。開発者は個人情報を収集せず、アプリ内購入もありません。広告は表示されます。</p>
+
+          <h4 data-i18n-key="privacy_contact_heading">お問い合わせ</h4>
+          <p>
+            <span data-i18n-key="privacy_contact_text_before">プライバシーポリシーに関するご質問は、</span><a href="#contact" data-i18n-key="privacy_contact_link">お問い合わせ</a><span data-i18n-key="privacy_contact_text_after">までご連絡ください。</span>
+          </p>
+
+          <p class="privacy-update" data-i18n-key="privacy_update">最終更新: 2026 年 11 月</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+      <div class="container">
+        <h2 class="section-title" data-i18n-key="contact_title">お問い合わせ</h2>
+        <div class="contact-content">
+          <p data-i18n-key="contact_intro">アプリに関するご質問、バグ報告、機能要望などがございましたら、お気軽にお問い合わせください。</p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <h3 data-i18n-key="contact_email_heading">📧 メール</h3>
+              <p><a href="mailto:angocat215@gmail.com">angocat215@gmail.com</a></p>
+            </div>
+            <div class="contact-method">
+              <h3 data-i18n-key="contact_bug_heading">🐛 バグ報告</h3>
+              <p data-i18n-key="contact_bug_text">リストが消えた、キャラの表情がおかしいといった不具合を見つけたら、上記メールアドレスまで詳細をお送りください。</p>
+            </div>
+            <div class="contact-method">
+              <h3 data-i18n-key="contact_feature_heading">💡 機能要望</h3>
+              <p data-i18n-key="contact_feature_text">こんな表情やスタンプがほしい、といったご要望もお待ちしています。</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-bottom">
+          <p data-i18n-key="footer_copyright">© 2026 かわいい買い物メモ. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
